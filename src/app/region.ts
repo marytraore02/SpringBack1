@@ -5,4 +5,5 @@ export interface Region{
     langueMajoritaire: string;
     nom_Region: string;
     superficie: string;
+    imageUrl:string;
 }

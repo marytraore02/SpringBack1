@@ -10,7 +10,8 @@ import { RegionService } from './region.service';
 })
 export class AppComponent implements OnInit{
   title!:'Bienvenue';
-  public regions:any;
+  onOpenModal:any;
+  public regions!:Region[];
   searchEmployees:any;
  
   constructor(private regionService: RegionService){}
