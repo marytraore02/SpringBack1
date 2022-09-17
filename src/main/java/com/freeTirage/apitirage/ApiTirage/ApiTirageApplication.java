@@ -19,8 +19,8 @@ public class ApiTirageApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		this.userRepository.save(new User(1L,"Mary", "TRAORE", "mary@gmail.com"));
-		this.userRepository.save(new User(2L,"Mary", "TRAORE", "mary@gmail.com"));
-		this.userRepository.save(new User(3L,"Mary", "TRAORE", "mary@gmail.com"));
+		this.userRepository.save(new User(1,"Mary", "TRAORE", "mary@gmail.com"));
+		this.userRepository.save(new User(2,"Mary", "TRAORE", "mary@gmail.com"));
+		this.userRepository.save(new User(3,"Mary", "TRAORE", "mary@gmail.com"));
 	}
 }
