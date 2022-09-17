@@ -9,17 +9,19 @@ import { RegionService } from './region.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  public regions!: Region[];
+  title!:'Bienvenue';
+  public regions:any;
   
   constructor(private regionService: RegionService){}
 
   ngOnInit(): void {
-      this.getRegion();
+      this.getRegions();
   }
-  public getRegion(): void {
-    this.regionService.getRegion().subscribe(
-      (response: Region[]) => {
-        this.regions = response;
+  public getRegions(): void {
+    this.regionService.getRegions().subscribe(
+      (data: Region[]) => {
+        console.log(data);
+        this.regions = data;
       },
       (error: HttpErrorResponse) => {
         alert(error.message);

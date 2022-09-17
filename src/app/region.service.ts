@@ -12,7 +12,7 @@ export class RegionService {
 
   constructor(private http: HttpClient) { }
 
-  public getRegion(): Observable<Region[]>{
+  public getRegions(): Observable<Region[]>{
     return this.http.get<Region[]>(`${this.apiServerUrl}/region/read`);
   }
   public getRegionSP(): Observable<Region[]>{
@@ -20,7 +20,7 @@ export class RegionService {
   }
 
   public createRegion(region: Region): Observable<Region>{
-    return this.http.post<Region>(`${this.apiServerUrl}/region/crcreateeate`, region);
+    return this.http.post<Region>(`${this.apiServerUrl}/region/create`, region);
   }
 
   public updateRegion(region: Region): Observable<Region>{
