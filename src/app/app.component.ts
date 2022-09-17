@@ -11,7 +11,8 @@ import { RegionService } from './region.service';
 export class AppComponent implements OnInit{
   title!:'Bienvenue';
   public regions:any;
-  
+  searchEmployees:any;
+ 
   constructor(private regionService: RegionService){}
 
   ngOnInit(): void {
