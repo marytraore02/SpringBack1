@@ -20,7 +20,27 @@ public class UserServiceImpl implements UserService {
         return userRepository.save(user);
     }
 
-    @Override
+  @Override
+  public User update(User user) {
+    return userRepository.save(user);
+  }
+
+  @Override
+  public User findById(Long id) {
+    return userRepository.findById(id).get();
+  }
+
+  @Override
+  public void Delete(Long id) {
+      userRepository.deleteById(id);
+  }
+
+
+  @Override
+  public User GetFirstname(String firstname) {
+    return userRepository.findByFirstname(firstname);
+  }
+  @Override
     public List<User> getAll() {
         return userRepository.findAll();
     }

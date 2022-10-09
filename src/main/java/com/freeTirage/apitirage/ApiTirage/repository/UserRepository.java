@@ -7,5 +7,6 @@ import com.freeTirage.apitirage.ApiTirage.models.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-
+  User findById(int id);
+  User findByFirstname(String firstname);
 }
